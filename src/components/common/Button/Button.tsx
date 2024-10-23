@@ -2,11 +2,11 @@ import { cn } from "@/utils/cn"
 import { cva, VariantProps } from "class-variance-authority"
 
 const buttonVariants = cva(
-  "flex items-center justify-center p-2",
+  "flex items-center justify-center px-4 py-2 rounded-2xl",
   {
     variants: {
       variant: {
-        default: "bg-blue-500 text-white",
+        default: "bg-primary-500 text-background font-bold",
       }
     },
     defaultVariants: {
@@ -16,8 +16,15 @@ const buttonVariants = cva(
 )
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> { }
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {
+  startContent?: React.ReactNode
+  endContent?: React.ReactNode
+}
 
-export const Button = ({ className, children, variant, ...props }: ButtonProps) => (
-  <button className={cn(buttonVariants({ variant }), className)} {...props}>{children}</button>
+export const Button = ({ className, children, variant, startContent, endContent, ...props }: ButtonProps) => (
+  <button className={cn(buttonVariants({ variant }), className)} {...props}>
+    {startContent && startContent}
+    {children}
+    {endContent && endContent}
+  </button>
 )
