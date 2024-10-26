@@ -17,7 +17,7 @@ const meta = {
       control: 'select',
       options: ['default', 'ghost', 'outlined', 'danger', 'danger-outlined'],
     },
-  }
+  },
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -27,9 +27,9 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     children: 'Button',
-    variant: "default",
+    variant: 'default',
     disabled: false,
-  }
+  },
 };
 
 export const Ghost: Story = {
@@ -37,29 +37,29 @@ export const Ghost: Story = {
     children: 'Button',
     variant: 'ghost',
     disabled: false,
-  }
-}
+  },
+};
 
 export const Outlined: Story = {
   args: {
     children: 'Button',
     variant: 'outlined',
     disabled: false,
-  }
-}
+  },
+};
 
 export const Danger: Story = {
   args: {
     children: 'Button',
     variant: 'danger',
     disabled: false,
-  }
-}
+  },
+};
 
 export const DangerOutlined: Story = {
   args: {
     children: 'Button',
     variant: 'danger-outlined',
-    disabled: false
-  }
-}
+    disabled: false,
+  },
+};
