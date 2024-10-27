@@ -77,7 +77,11 @@ const config: Config = {
     },
     fontFamily: {
       sans: ["'Source Sans 3'", 'sans-serif'],
-      button: [],
+    },
+    extend: {
+      fontFamily: {
+        heading: ["'Space Grotesk'", 'sans-serif'],
+      },
     },
   },
   plugins: [],
