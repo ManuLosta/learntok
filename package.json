@@ -16,6 +16,7 @@
     "@typescript-eslint/eslint-plugin": "^8.11.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "framer-motion": "^11.11.10",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "next": "14.2.15",
