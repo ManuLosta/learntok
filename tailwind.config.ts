@@ -74,6 +74,8 @@ const config: Config = {
         '900': '#331010',
         '950': '#190808',
       },
+      filledPlaceHolder: '#404c64',
+      defaultPlaceHolder: '#8191b0',
     },
     fontFamily: {
       sans: ["'Source Sans 3'", 'sans-serif'],
