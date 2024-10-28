@@ -15,7 +15,7 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['default', 'focused', 'error', 'filled'],
+      options: ['default', 'filled'],
     },
     label: {
       control: 'text',
@@ -42,24 +42,6 @@ export const Default: Story = {
     description: 'Description',
     placeholder: 'Placeholder',
     variant: 'default',
-    disabled: false,
-  },
-};
-
-export const Focused: Story = {
-  args: {
-    label: 'Label',
-    description: 'Description',
-    variant: 'focused',
-    disabled: false,
-  },
-};
-
-export const Error: Story = {
-  args: {
-    label: 'Label',
-    description: 'Description',
-    variant: 'error',
     disabled: false,
   },
 };
