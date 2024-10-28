@@ -10,8 +10,6 @@ const meta = {
     layout: 'centered',
   },
 
-  tags: ['autodocs'],
-
   argTypes: {
     variant: {
       control: 'select',
@@ -43,6 +41,8 @@ export const Default: Story = {
     placeholder: 'Placeholder',
     variant: 'default',
     disabled: false,
+    isError: false,
+    className: 'w-80',
   },
 };
 
@@ -53,5 +53,7 @@ export const Filled: Story = {
     placeholder: 'Placeholder',
     variant: 'filled',
     disabled: false,
+    isError: false,
+    className: 'w-80',
   },
 };
