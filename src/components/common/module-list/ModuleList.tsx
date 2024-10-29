@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronDownIcon } from '@/components/common/icon/ChevronDownIcon';
@@ -9,34 +11,34 @@ import { QuestionIcon } from '@/components/common/icon/QuestionIcon';
 import { DocumentIcon } from '@/components/common/icon/DocumentIcon';
 
 export interface ModuleListProps {
-  variant: 'completed' | 'locked' | 'progress',
-  title: string,
-  duration: string,
-  description: string,
-  videos?: number,
-  questions?: number,
-  documents?: number,
+  variant: 'completed' | 'locked' | 'progress';
+  title: string;
+  duration: string;
+  description: string;
+  videos?: number;
+  questions?: number;
+  documents?: number;
 }
 
 export const ModuleList = ({
-                             duration,
-                             title,
-                             description,
-                             variant,
-                             videos = 0,
-                             questions = 0,
-                             documents = 0,
-                           }: ModuleListProps) => {
+  duration,
+  title,
+  description,
+  variant,
+  videos = 0,
+  questions = 0,
+  documents = 0,
+}: ModuleListProps) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="flex flex-col gap-2 p-2">
+    <div className="flex w-full max-w-full flex-col gap-2 p-2">
       <div
-        className="flex min-w-[300px] cursor-pointer items-center gap-4"
+        className="flex w-full cursor-pointer items-center gap-4"
         onClick={() => setExpanded(!expanded)}
       >
         {variant == 'completed' && (
-          <div className="h-[24px] w-[24px] rounded-full bg-success-500 flex items-center justify-center">
+          <div className="flex h-[24px] w-[24px] items-center justify-center rounded-full bg-success-500">
             <CheckIcon size={12} className="text-foreground" />
           </div>
         )}
@@ -44,7 +46,7 @@ export const ModuleList = ({
           <div className="h-[24px] w-[24px] rounded-full bg-primary-500"></div>
         )}
         {variant == 'locked' && (
-          <div className="h-[24px] w-[24px] rounded-full bg-slate-200 flex items-center justify-center">
+          <div className="flex h-[24px] w-[24px] items-center justify-center rounded-full bg-slate-200">
             <LockIcon size={12} className="text-foreground" />
           </div>
         )}
@@ -71,31 +73,42 @@ export const ModuleList = ({
               collapsed: { opacity: 0, height: 0 },
             }}
             transition={{ duration: 0.2 }}
-            className="flex flex-col gap-2"
+            className="flex w-full flex-col gap-2"
           >
             <p className="typography-body">{description}</p>
             <div className="flex items-center justify-end gap-2">
               <div className="flex items-center gap-4 p-2">
                 {videos != 0 && (
                   <div className="flex items-center gap-2">
-                    <p className="typography-body-small text-slate-500">{videos}</p>
+                    <p className="typography-body-small text-slate-500">
+                      {videos}
+                    </p>
                     <VideoIcon size={16} className="text-slate-500" />
                   </div>
                 )}
                 {documents != 0 && (
                   <div className="flex items-center gap-2">
-                    <p className="typography-body-small text-slate-500">{documents}</p>
+                    <p className="typography-body-small text-slate-500">
+                      {documents}
+                    </p>
                     <DocumentIcon size={16} className="text-slate-500" />
                   </div>
                 )}
                 {questions != 0 && (
                   <div className="flex items-center gap-2">
-                    <p className="typography-body-small text-slate-500">{questions}</p>
+                    <p className="typography-body-small text-slate-500">
+                      {questions}
+                    </p>
                     <QuestionIcon size={16} className="text-slate-500" />
                   </div>
                 )}
               </div>
-              <Button className="rounded-full ml-auto px-2 py-1" disabled={variant == 'locked'}>Go</Button>
+              <Button
+                className="ml-auto rounded-full px-2 py-1"
+                disabled={variant == 'locked'}
+              >
+                Go
+              </Button>
             </div>
           </motion.div>
         )}
