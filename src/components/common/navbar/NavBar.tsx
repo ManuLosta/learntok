@@ -1,7 +1,8 @@
 import React from 'react';
 import { NavBarItem } from './NavBarItem';
+import { cn } from '@/utils/cn';
 
-export interface NavBarProps {
+export interface NavBarProps extends React.HTMLProps<HTMLDivElement> {
   items: {
     label: string;
     icon: React.ReactNode;
@@ -9,9 +10,9 @@ export interface NavBarProps {
   activeIndex: number;
 }
 
-export const NavBar = ({ items, activeIndex }: NavBarProps) => {
+export const NavBar = ({ items, activeIndex, className, ...props }: NavBarProps) => {
   return (
-    <div className="flex w-[390px] justify-around rounded-t-lg bg-slate-50 py-4">
+    <div className={cn("flex justify-around rounded-t-lg bg-slate-50 py-4", className)} {...props}>
       {items.map((item, index) => (
         <NavBarItem
           key={index}

@@ -3,7 +3,7 @@ import React from 'react';
 import { cva, VariantProps } from 'class-variance-authority';
 
 const navButtonVariants = cva(
-  'flex flex-col items-center justify-center px-4 py-2 gap-1 transition-all duration-150',
+  'flex flex-col flex-grow items-center justify-center px-4 py-2 gap-1 transition-all duration-150',
   {
     variants: {
       activeTab: {
