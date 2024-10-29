@@ -1,9 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { ModuleList } from './ModuleList';
+import { ModuleList, ModuleListProps } from './ModuleList';
+import { JSX } from 'react';
 
 const meta = {
-  title: 'Common/Module List',
+  title: 'Common/ModuleList',
   component: ModuleList,
   parameters: {
     layout: 'centered',
@@ -12,9 +13,9 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['progress', 'completed', 'locked']
-    }
-  }
+      options: ['progress', 'completed', 'locked'],
+    },
+  },
 } satisfies Meta<typeof ModuleList>;
 
 export default meta;
@@ -28,9 +29,16 @@ const defaultProps = {
   videos: 2,
   documents: 1,
   questions: 3,
-}
+};
+
+const RenderComponent = (args: JSX.IntrinsicAttributes & ModuleListProps) => (
+  <div className="bg-white min-w-[300px] max-w-lg">
+    <ModuleList {...args} />
+  </div>
+);
 
 export const InProgress: Story = {
+  render: (args) => <RenderComponent {...args} />,
   args: {
     variant: 'progress',
     ...defaultProps
@@ -38,15 +46,17 @@ export const InProgress: Story = {
 };
 
 export const Completed: Story = {
- args: {
-   variant: 'completed',
-   ...defaultProps
- }
-}
+  render: (args) => <RenderComponent {...args} />,
+  args: {
+    variant: 'completed',
+    ...defaultProps
+  },
+};
 
 export const Locked: Story = {
+  render: (args) => <RenderComponent {...args} />,
   args: {
     variant: 'locked',
     ...defaultProps
-  }
-}
+  },
+};
