@@ -32,7 +32,7 @@ export const ModuleList = ({
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="flex w-full max-w-full flex-col gap-2 p-2">
+    <div className="flex w-full max-w-full flex-col gap-2 p-2 overflow-hidden">
       <div
         className="flex w-full cursor-pointer items-center gap-4"
         onClick={() => setExpanded(!expanded)}
@@ -69,8 +69,8 @@ export const ModuleList = ({
             animate="open"
             exit="collapsed"
             variants={{
-              open: { opacity: 1, height: 'auto' },
-              collapsed: { opacity: 0, height: 0 },
+              open: { height: 'auto' },
+              collapsed: { height: 0 },
             }}
             transition={{ duration: 0.2 }}
             className="flex w-full flex-col gap-2"
