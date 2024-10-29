@@ -11,8 +11,11 @@ const config: Config = {
       sans: ["'Source Sans 3'", 'sans-serif'],
     },
     extend: {
+      textColor: {
+        DEFAULT: '#152951',
+      },
       colors: {
-        foreground: '#070a10',
+        foreground: '#152951',
         background: '#ffffff',
         primary: {
           '50': '#eef3ff',
@@ -78,8 +81,6 @@ const config: Config = {
           '900': '#331010',
           '950': '#190808',
         },
-        filledPlaceHolder: '#404c64',
-        defaultPlaceHolder: '#8191b0',
       },
       fontFamily: {
         heading: ["'Space Grotesk'", 'sans-serif'],
