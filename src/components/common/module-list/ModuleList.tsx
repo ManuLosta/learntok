@@ -84,7 +84,7 @@ export const ModuleList = ({
                 )}
                 {documents != 0 && (
                   <div className="flex items-center gap-2">
-                    <p className="typography-body-small text-slate-500">{questions}</p>
+                    <p className="typography-body-small text-slate-500">{documents}</p>
                     <DocumentIcon size={16} className="text-slate-500" />
                   </div>
                 )}
