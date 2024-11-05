@@ -59,7 +59,7 @@ export const ModuleList = ({
           animate={{ rotate: expanded ? 180 : 0 }}
           transition={{ duration: 0.2 }}
         >
-          <ChevronDownIcon size={12} className="text-foreground" />
+          <ChevronDownIcon size={24} className="text-foreground" />
         </motion.div>
       </div>
       <AnimatePresence initial={false}>
