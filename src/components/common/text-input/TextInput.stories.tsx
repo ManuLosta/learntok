@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { TextInput } from './TextInput';
+import { SearchIcon } from '@/components/common/icon/SearchIcon';
+import { CrossIcon } from '@/components/common/icon/CrossIcon';
 
 const meta = {
   title: 'Common/TextInput',
@@ -41,10 +43,12 @@ export const Default: Story = {
     label: 'Label',
     description: 'Description',
     placeholder: 'Placeholder',
-    variant: 'default',
+    variant: "filled",
     disabled: false,
     isError: false,
     className: 'w-80',
+    startContent: null,
+    endContent: null,
   },
 };
 
@@ -57,5 +61,15 @@ export const Filled: Story = {
     disabled: false,
     isError: false,
     className: 'w-80',
+  },
+};
+
+export const SearchInput: Story = {
+  args: {
+    startContent: <SearchIcon size={16} className="text-slate-500 ml-1" />, // Adjust size and color
+    endContent: <CrossIcon size={16} className = "mr-1 text-slate-500  "/>,
+    placeholder: 'Search',
+    variant: 'default',
+    className: 'bg-gray-200 border-gray-200 w-96 h-12 focus:border-gray-200 focus:ring-1 focus:ring-gray-500 rounded-2xl', // Adjust dimensions to match the image design
   },
 };
