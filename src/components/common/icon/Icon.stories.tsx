@@ -12,6 +12,7 @@ import { SearchIcon } from '@/components/common/icon/SearchIcon';
 import { QuestionIcon } from '@/components/common/icon/QuestionIcon';
 import { LockIcon } from '@/components/common/icon/LockIcon';
 import { HomeIcon } from '@/components/common/icon/HomeIcon';
+import { CrossIcon } from '@/components/common/icon/CrossIcon';
 
 const meta = {
   title: 'Common/Icon',
@@ -38,6 +39,7 @@ const IconGrid = () => (
     <QuestionIcon size={24} />
     <LockIcon size={24} />
     <HomeIcon size={24} />
+    <CrossIcon size={24} />
   </div>
 )
 
