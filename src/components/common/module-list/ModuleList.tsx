@@ -59,7 +59,7 @@ export const ModuleList = ({
           animate={{ rotate: expanded ? 180 : 0 }}
           transition={{ duration: 0.2 }}
         >
-          <ChevronDownIcon size={12} className="text-foreground" />
+          <ChevronDownIcon size={24} className="text-foreground" />
         </motion.div>
       </div>
       <AnimatePresence initial={false}>
@@ -80,7 +80,7 @@ export const ModuleList = ({
               <div className="flex items-center gap-4 p-2">
                 {videos != 0 && (
                   <div className="flex items-center gap-2">
-                    <p className="typography-body-small text-slate-500">
+                    <p className="typography-body-small text-slate-500 font-bold">
                       {videos}
                     </p>
                     <VideoIcon size={16} className="text-slate-500" />
@@ -88,7 +88,7 @@ export const ModuleList = ({
                 )}
                 {documents != 0 && (
                   <div className="flex items-center gap-2">
-                    <p className="typography-body-small text-slate-500">
+                    <p className="typography-body-small text-slate-500 font-bold">
                       {documents}
                     </p>
                     <DocumentIcon size={16} className="text-slate-500" />
@@ -96,7 +96,7 @@ export const ModuleList = ({
                 )}
                 {questions != 0 && (
                   <div className="flex items-center gap-2">
-                    <p className="typography-body-small text-slate-500">
+                    <p className="typography-body-small text-slate-500 font-bold">
                       {questions}
                     </p>
                     <QuestionIcon size={16} className="text-slate-500" />
