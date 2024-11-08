@@ -52,14 +52,13 @@ export const TextInput = ({
         <label
           className={cn(
             'typography-body',
-            isError ? 'text-danger-500' : 'text-gray-700',
+            isError && 'text-danger-500'
           )}
         >
           {label}
         </label>
       )}
       <div className="relative flex items-center">
-        {/* Start content */}
         {startContent && (
           <div className="absolute left-2 flex items-center">{startContent}</div>
         )}
@@ -68,8 +67,8 @@ export const TextInput = ({
             textInputVariants({ variant }),
             className,
             'pl-2 pr-2 outline-none focus:placeholder-transparent',
-            startContent && 'pl-8', // Adjust padding for start content
-            endContent && 'pr-8', // Adjust padding for end content
+            startContent && 'pl-8',
+            endContent && 'pr-8',
             isError &&
             variant === 'default' &&
             'border-danger-500 bg-background text-danger-500 ring-1 ring-danger-500 focus:border-danger-500 focus:ring-danger-500',
@@ -82,7 +81,6 @@ export const TextInput = ({
           onBlur={() => setIsFocused(false)}
           {...props}
         />
-        {/* End content shown only on focus */}
         {isFocused && endContent && (
           <div className="absolute right-2 flex items-center">{endContent}</div>
         )}
@@ -91,7 +89,7 @@ export const TextInput = ({
         <p
           className={cn(
             'typography-body-small',
-            isError ? 'text-danger-500' : 'text-gray-500',
+            isError && 'text-danger-500',
           )}
         >
           {description}
