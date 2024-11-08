@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Option } from '@/components/course/Option';
+import { Option } from '@/components/course/option/Option';
 
 const meta = {
-  title: 'course/OptionVariants',
+  title: 'Course/Option',
   component: Option,
 
   parameters: {

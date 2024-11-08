@@ -13,7 +13,9 @@ import { QuestionIcon } from '@/components/common/icon/QuestionIcon';
 import { LockIcon } from '@/components/common/icon/LockIcon';
 import { HomeIcon } from '@/components/common/icon/HomeIcon';
 import { CrossIcon } from '@/components/common/icon/CrossIcon';
+import { SupergroupIcon } from '@/components/common/icon/SupergroupIcon';
 import { SearchOutlinedIcon } from '@/components/common/icon/SearchOutlinedIcon';
+
 
 const meta = {
   title: 'Common/Icon',
@@ -27,7 +29,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const IconGrid = () => (
-  <div className="flex gap-6 p-2">
+  <div className="flex gap-6 p-2 text-foreground">
     <DocumentIcon size={24} />
     <CheckIcon size={24} />
     <ChevronDownIcon size={24} />
@@ -42,6 +44,7 @@ const IconGrid = () => (
     <LockIcon size={24} />
     <HomeIcon size={24} />
     <CrossIcon size={24} />
+    <SupergroupIcon size={24} />
   </div>
 )
 
