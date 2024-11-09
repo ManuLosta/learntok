@@ -10,8 +10,8 @@ const awardsVariants = cva (
     variants: {
       variant: {
         gold: "bg-[#FDCB42] border-[#68560F] border-4",
-        silver: "bg-[#C0C0C0] border-[#808080] border-4",
-        bronze: "bg-[#CD7F32] border-[#8B4513] border-4",
+        silver: "bg-[#E0E0E0] border-[#808080] border-4",
+        bronze: "bg-[#FCA956] border-[#8B4513] border-4",
       }
     },
   },
@@ -32,7 +32,7 @@ export const ChildAward = ({ variant, title = "Course name", category = "Course 
         {variant === 'silver' && <Image src={"/assets/booky-silver.svg"} alt="Silver Award" width={72} height={72} />}
         {variant === 'bronze' && <Image src={"/assets/booky-bronze.svg"} alt="Bronze Award" width={72} height={72} />}
       </div>
-      <div className="ml-2.5">
+      <div className="ml-2">
         <div className="typography-body-bold text-foreground">{title}</div>
         <div className="typography-body text-slate-500">{category}</div>
         <div className="typography-body-small text-slate-500 flex items-center gap-2">
