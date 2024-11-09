@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { cva, VariantProps } from 'class-variance-authority';
 import { cn } from '@/utils/cn';
+import { CalendarIcon } from '@/components/common/icon/CalendarIcon';
 
 
 const awardsVariants = cva (
@@ -35,7 +36,7 @@ export const ChildAward = ({ variant, title = "Course name", category = "Course 
         <div className="typography-body-bold text-foreground">{title}</div>
         <div className="typography-body text-slate-500">{category}</div>
         <div className="typography-body-small text-slate-500 flex items-center gap-2">
-          <Image src="/assets/calendar-icon.svg" alt="Calendar Icon" width={12} height={12} />
+          <CalendarIcon size={12} />
           {date}
         </div>
       </div>
