@@ -42,8 +42,8 @@ export const CatalogCourse = ({
 
         <div className="flex flex-col flex-grow">
           <h3 className="font-bold text">{courseName}</h3>
-          <p className="text">{courseCategory}</p>
-          <span className="text-gray-500 text-sm">{modulesInfo}</span>
+          <p className="text-slate-500">{courseCategory}</p>
+          <span className="text-slate-500 text-sm">{modulesInfo}</span>
         </div>
 
         {endContent && (
