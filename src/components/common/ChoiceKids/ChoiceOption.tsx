@@ -28,21 +28,24 @@ export interface ChoiceOptionProps
 export const ChoiceOption = ({
                                className,
                                children,
+                               variant = 'default',
                                ...props
                              }: ChoiceOptionProps) => {
-  const [variant, setVariant] = useState('default');
+  const [currentVariant, setCurrentVariant] = useState('default');
 
   const handleClick = () => {
-    // Cambiar a `correct` o `incorrect` de forma aleatoria
-    const newVariant = Math.random() > 0.5 ? 'correct' : 'incorrect';
-    setVariant(newVariant);
+    if (variant === 'neutral') {
+      setCurrentVariant('incorrect');
+    } else {
+      setCurrentVariant(variant);
+    }
   };
 
   return (
     <button
       onClick={handleClick}
       className={cn(
-        optionVariants({ variant }),
+        optionVariants({ variant: currentVariant }),
         'w-[135px] max-h-[200px] p-[57px_43px] text-center font-bold text-lg leading-[130%] text-[var(--text,#152951)]',
         className
       )}
