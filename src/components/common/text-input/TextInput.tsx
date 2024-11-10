@@ -45,6 +45,7 @@ export const TextInput = ({
                             ...props
                           }: TextInputProps) => {
   const [isFocused, setIsFocused] = useState(false);
+  const [inputValue, setInputValue] = useState('');
 
   return (
     <div className="flex w-full flex-col gap-2">
@@ -77,13 +78,17 @@ export const TextInput = ({
             'border-danger-200 bg-danger-200 focus:border-danger-500 focus:ring-danger-500',
           )}
           placeholder={isError ? '' : placeholder}
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
           onFocus={() => setIsFocused(true)}
-          onBlur={() => setIsFocused(false)}
           {...props}
         />
-        {isFocused && endContent && (
-          <div className="absolute right-2 flex items-center">{endContent}</div>
-        )}
+          {isFocused && inputValue && endContent && (
+            <div className="absolute right-2 flex items-center cursor-pointer" onClick={() => setInputValue('')}>
+              {endContent}
+            </div>
+          )}
+
       </div>
       {description && (
         <p

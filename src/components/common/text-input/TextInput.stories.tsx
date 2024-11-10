@@ -70,6 +70,6 @@ export const SearchInput: Story = {
     endContent: <CrossIcon size={16} className = "mr-1 text-slate-500  "/>,
     placeholder: 'Search',
     variant: 'default',
-    className: 'bg-gray-200 border-gray-200 w-96 h-12 rounded-2xl',
+    className: 'bg-gray-200 border-gray-200 w-96 h-12 rounded-2xl focus:bg-gray-200 focus:ring-0 focus:border-gray-200',
   },
 };
