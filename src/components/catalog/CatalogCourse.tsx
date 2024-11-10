@@ -8,6 +8,8 @@ export interface CatalogCourseProps
   courseName: string;
   courseCategory: string;
   modulesInfo: string;
+  width?: string;
+  height?: string;
 }
 
 export const CatalogCourse = ({
@@ -17,33 +19,37 @@ export const CatalogCourse = ({
                                 courseName,
                                 courseCategory,
                                 modulesInfo,
+                                width = '100%',
+                                height = '100%',
                                 ...props
                               }: CatalogCourseProps) => {
   return (
-    <div
-      className={cn(
-        'flex items-center gap-4 bg-white rounded-2xl shadow-md p-4 transition-all duration-150 w-96',
-        className
-      )}
-      {...props}
-    >
-      <div className="w-24 rounded-2xl h-16 flex-shrink-0 bg-gray-200 overflow-hidden">
-        {startContent ? (
-          startContent
-        ) : (
-          <div className="w-full h-full bg-gray-200" />
+    <div style={{ width, height }}>
+      <div
+        className={cn(
+          'flex items-center gap-4 bg-white rounded-2xl p-4 transition-all duration-150',
+          className
+        )}
+        {...props}
+      >
+        <div className="w-24 rounded-2xl h-16 flex-shrink-0 bg-gray-200 overflow-hidden">
+          {startContent ? (
+            startContent
+          ) : (
+            <div className="w-full h-full bg-gray-200" />
+          )}
+        </div>
+
+        <div className="flex flex-col flex-grow">
+          <h3 className="font-bold text">{courseName}</h3>
+          <p className="text">{courseCategory}</p>
+          <span className="text-gray-500 text-sm">{modulesInfo}</span>
+        </div>
+
+        {endContent && (
+          <div className="ml-auto flex-shrink-0">{endContent}</div>
         )}
       </div>
-
-      <div className="flex flex-col flex-grow">
-        <h3 className="font-bold text-gray-900">{courseName}</h3>
-        <p className="text-gray-600">{courseCategory}</p>
-        <span className="text-gray-500 text-sm">{modulesInfo}</span>
-      </div>
-
-      {endContent && (
-        <div className="ml-auto flex-shrink-0">{endContent}</div>
-      )}
     </div>
   );
 };
