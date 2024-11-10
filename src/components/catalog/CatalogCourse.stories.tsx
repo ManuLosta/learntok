@@ -54,6 +54,7 @@ export const Default: Story = {
       />
     ),
     endContent: <ChevronRight className={'text-gray-300'} size={12} />,
-    className: 'max-w-md',
+    width: '336px',
+    height: '74px',
   },
 };
