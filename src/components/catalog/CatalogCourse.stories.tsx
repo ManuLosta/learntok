@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { CatalogCourse } from './CatalogCourse';
-import { ChevronRight } from '../common/icon/ChevronRight';
+import { ChevronRight } from '@/components/common/icon/ChevronRight';
 
 const meta = {
   title: 'Catalog/CatalogCourse',
@@ -53,8 +53,7 @@ export const Default: Story = {
         className="w-full h-full object-cover"
       />
     ),
-    endContent: <ChevronRight className={'text-gray-300'} size={12} />,
-    width: '336px',
-    height: '74px',
+    endContent: <ChevronRight className='text-gray-300' size={16} />,
+    className: "w-[336px]"
   },
 };
