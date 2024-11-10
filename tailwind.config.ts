@@ -11,6 +11,10 @@ const config: Config = {
       sans: ["'Source Sans 3'", 'sans-serif'],
     },
     extend: {
+      boxShadow: {
+        'custom-xl': '0 20px 25px rgba(0, 0, 0, 0.30)',
+        'custom-2xl': '0 0 14px 0 rgba(0, 0, 0, 0.35)',
+      },
       textColor: {
         DEFAULT: '#152951',
       },
@@ -81,6 +85,8 @@ const config: Config = {
           '900': '#331010',
           '950': '#190808',
         },
+        orange: '#fed7aa',
+        green: '#a7f3d0',
       },
       fontFamily: {
         heading: ["'Space Grotesk'", 'sans-serif'],
