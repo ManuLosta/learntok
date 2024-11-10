@@ -22,7 +22,7 @@ export const CatalogCourse = ({
   return (
     <div
       className={cn(
-        'flex items-center gap-4 bg-white rounded-2xl shadow-md p-4 transition-all duration-150 w-96',
+        'flex items-center gap-4 bg-white rounded-2xl p-4 transition-all duration-150 w-96',
         className
       )}
       {...props}
@@ -36,8 +36,8 @@ export const CatalogCourse = ({
       </div>
 
       <div className="flex flex-col flex-grow">
-        <h3 className="font-bold text-gray-900">{courseName}</h3>
-        <p className="text-gray-600">{courseCategory}</p>
+        <h3 className="font-bold text">{courseName}</h3>
+        <p className="text">{courseCategory}</p>
         <span className="text-gray-500 text-sm">{modulesInfo}</span>
       </div>
 
