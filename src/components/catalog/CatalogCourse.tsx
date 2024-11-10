@@ -22,7 +22,7 @@ export const CatalogCourse = ({
   return (
     <div
       className={cn(
-        'flex items-center gap-4 bg-white rounded-2xl p-4 transition-all duration-150 w-96',
+        'flex items-center gap-4 bg-white rounded-2xl p-4 transition-all duration-150 w-full',
         className
       )}
       {...props}
