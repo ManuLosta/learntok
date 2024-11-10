@@ -3,7 +3,7 @@ import { cn } from '@/utils/cn';
 import { cva, VariantProps } from 'class-variance-authority';
 
 const categoryLabelVariants = cva(
-  'flex items-center justify-center px-4 py-2 rounded-full shadow-2xl typography-body-small transition-all duration-150',
+  'flex items-center justify-center px-4 py-2 rounded-full shadow-custom-2xl typography-body-small transition-all duration-150',
   {
     variants: {
       variant: {
@@ -34,7 +34,7 @@ export const CategoryLabel = ({
   endContent,
   ...props
 }: CategoryLabelProps) => (
-  <div className={cn(categoryLabelVariants({ variant }), 'z-10 overflow-visible', className)} {...props}>
+  <div className={cn(categoryLabelVariants({ variant }), className)} {...props}>
     {startContent && startContent}
     {children}
     {endContent && endContent}
