@@ -3,7 +3,7 @@ import { cn } from '@/utils/cn';
 import { cva, VariantProps } from 'class-variance-authority';
 
 const categoryLabelVariants = cva(
-  'flex items-center justify-center px-4 py-2 rounded-full shadow-custom-2xl typography-body-small transition-all duration-150',
+  'flex items-center justify-center px-2 py-1 rounded-full shadow-custom-2xl typography-body-small transition-all duration-150 text-foreground',
   {
     variants: {
       variant: {
