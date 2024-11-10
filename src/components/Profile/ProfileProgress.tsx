@@ -19,9 +19,9 @@ export const ProfileProgress = ({
   const progress = (finalCompletedModules / validTotalModules) * 100;
 
   return (
-    <div className="w-96 p-4 shadow-md rounded-3xl bg-slate-50">
-      <h2 className="text-2xl font-semibold font-heading text-gray-800 mb-2">Progress</h2>
-      <span className="block font-sans text-xs text-slate-600 mb-4">
+    <div className="w-[364px] h-[124px] py-2 px-4 shadow-md rounded-3xl bg-slate-50 flex flex-col gap-2.5 justify-center items-start">
+      <h2 className="text-2xl font-semibold font-heading text-gray-800">Progress</h2>
+      <span className="block font-sans text-xs text-slate-600">
         {finalCompletedModules} of {validTotalModules} modules completed
       </span>
       <ProgressBar progress={progress} />
