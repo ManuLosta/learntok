@@ -81,6 +81,8 @@ const config: Config = {
           '900': '#331010',
           '950': '#190808',
         },
+        orange: '#fed7aa',
+        green: '#a7f3d0',
       },
       fontFamily: {
         heading: ["'Space Grotesk'", 'sans-serif'],
