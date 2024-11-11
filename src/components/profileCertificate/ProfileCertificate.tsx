@@ -8,8 +8,6 @@ export interface ProfileCertificateProps
   courseName: string;
   courseCategory: string;
   date: string;
-  width?: string;
-  height?: string;
 }
 
 export const ProfileCertificate = ({
@@ -18,12 +16,10 @@ export const ProfileCertificate = ({
                                 courseName,
                                 courseCategory,
                                 date,
-                                width = '100%',
-                                height = '100%',
                                 ...props
                               }: ProfileCertificateProps) => {
   return (
-    <div style={{ width, height }}>
+    <div className={className} >
   <div
     className={cn(
     'flex items-center gap-4 bg-white rounded-2xl p-4 transition-all duration-150',
@@ -40,9 +36,9 @@ export const ProfileCertificate = ({
     </div>
 
     <div className="flex flex-col flex-grow">
-  <h3 className="font-bold text">{courseName}</h3>
-    <p className="text-slate-500">{courseCategory}</p>
-    <span className="text-slate-500 text-sm flex items-center gap-2">
+  <h3 className="typography-body-bold text">{courseName}</h3>
+    <p className="typography-body text-slate-500">{courseCategory}</p>
+    <span className="text-slate-500 typography-body-small flex items-center gap-2">
       <CalendarIcon size={12} />
       {date}
     </span>

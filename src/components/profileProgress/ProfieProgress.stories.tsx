@@ -17,15 +17,15 @@ const meta = {
       control: 'number',
       description: 'Total number of modules',
     },
-    width: {
+    className: {
       control: 'text',
-      description: 'Width of the component',
+      description: 'Style of the component',
     },
   },
   args: {
     completedModules: 3,
     totalModules: 5,
-    width: '100%', // Default width
+    className: 'w-100%', // Default width
   },
 } satisfies Meta<typeof ProfileProgress>;
 
@@ -37,8 +37,7 @@ export const Empty: Story = {
   args: {
     completedModules: 0,
     totalModules: 5,
-    width: '364px',
-    height: '124px',
+    className: 'w-[364px]',
   },
 };
 
@@ -46,8 +45,7 @@ export const InProgress: Story = {
   args: {
     completedModules: 3,
     totalModules: 5,
-    width: '364px',
-    height: '124px',
+    className: 'w-[364px]',
   },
 };
 
@@ -55,7 +53,6 @@ export const Complete: Story = {
   args: {
     completedModules: 5,
     totalModules: 5,
-    width: '364px',
-    height: '124px',
+    className: 'w-[364px]',
   },
 };

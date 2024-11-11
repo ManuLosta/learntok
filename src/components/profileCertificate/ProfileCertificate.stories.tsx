@@ -48,7 +48,6 @@ export const Default: Story = {
         className="w-full h-full object-cover"
       />
     ),
-    width: '336px',
-    height: '74px',
+    className : 'w-[336px]'
   },
 };
