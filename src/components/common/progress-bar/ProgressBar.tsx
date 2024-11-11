@@ -5,12 +5,12 @@ export interface ProgressBarProps extends React.ComponentProps<'div'> {
   progress: number;
 }
 
-export const ProgressBar = ({ progress, ...props }: ProgressBarProps) => {
+export const ProgressBar = ({ progress, className, ...props }: ProgressBarProps) => {
   const clampedProgress = Math.min(100, Math.max(0, progress));
 
   return (
     <div
-      className="w-full bg-gray-200 h-4 rounded-full overflow-hidden"
+      className={cn("w-full bg-gray-200 h-4 rounded-full overflow-hidden", className)}
       {...props}
       role="progressbar"
       aria-valuenow={clampedProgress}
