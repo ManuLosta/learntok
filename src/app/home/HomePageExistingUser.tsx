@@ -114,8 +114,8 @@ export default function HomePage() {
       </section>
 
       {/* Bottom Navigation */}
-      <div className="fixed bottom-0 left-0 right-0">
         <NavBar
+          className="fixed bottom-0 w-screen left-0"
           items={[
             { label: 'Home', icon: <HomeIcon size={24} /> },
             { label: 'Search', icon: <SearchIcon size={24} /> },
@@ -123,7 +123,6 @@ export default function HomePage() {
           ]}
           activeIndex={0}
         />
-      </div>
     </div>
   );
 }
