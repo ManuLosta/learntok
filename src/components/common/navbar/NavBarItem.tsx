@@ -8,7 +8,7 @@ const navButtonVariants = cva(
     variants: {
       activeTab: {
         none: ['text-slate-300'],
-        active: ['text-primary-500'],
+        active: ['text-primary-500 font-bold'],
       },
     },
     defaultVariants: {
@@ -25,6 +25,10 @@ export interface NavButtonProps extends VariantProps<typeof navButtonVariants> {
 export const NavBarItem = ({ label, icon, activeTab }: NavButtonProps) => (
   <div className={cn(navButtonVariants({ activeTab }))}>
     {icon}
-    <span className="typography-body-small">{label}</span>
+    <span
+      className={cn(navButtonVariants({ activeTab }), 'typography-body-small')}
+    >
+      {label}
+    </span>
   </div>
 );
