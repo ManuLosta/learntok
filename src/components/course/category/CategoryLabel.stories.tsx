@@ -12,12 +12,6 @@ const meta = {
 
   tags: ['autodocs'],
 
-  argTypes: {
-    variant: {
-      control: 'select',
-      options: ['blue', 'gray', 'orange', 'green'],
-    },
-  },
 } satisfies Meta<typeof CategoryLabel>;
 
 export default meta;
@@ -27,27 +21,27 @@ type Story = StoryObj<typeof meta>;
 export const Blue: Story = {
   args: {
     children: 'Category',
-    variant: 'blue',
+    color: '#B2C9FF',
   }
 };
 
 export const Gray: Story = {
   args: {
     children: 'Category',
-    variant: 'gray',
+    color: '#D4DBE8',
   }
 };
 
 export const Orange: Story = {
   args: {
     children: 'Category',
-    variant: 'orange',
+    color: '#FED7AA',
   }
 };
 
 export const Green: Story = {
   args: {
     children: 'Category',
-    variant: 'green',
+    color: '#A7F3D0',
   }
 };
