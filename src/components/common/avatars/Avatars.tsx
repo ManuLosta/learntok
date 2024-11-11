@@ -8,7 +8,7 @@ const avatarVariants = cva(
         variants: {
             variant: {
                 blue: "bg-primary-100",
-                orange: "bg-orange-300",
+                orange: "bg-[#FED7AA]",
                 green: "bg-[#A7F3D0]",
             }
         },
