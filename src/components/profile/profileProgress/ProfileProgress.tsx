@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProgressBar } from '../common/progress-bar/ProgressBar';
+import { ProgressBar } from '../../common/progress-bar/ProgressBar';
 
 interface ProfileProgressProps {
   className?: string;
