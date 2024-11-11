@@ -59,7 +59,7 @@ export const CourseItem = ({
         {variant == 'on_progress' && (
           <>
             <span className="typography-body-small text-slate-600">{completedModules} of {totalModules} modules completed</span>
-            <ProgressBar progress={progress}/>
+            <ProgressBar progress={progress} className="h-2"/>
           </>
         )}
       </div>
