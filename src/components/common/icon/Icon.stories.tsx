@@ -15,11 +15,6 @@ import { HomeIcon } from '@/components/common/icon/HomeIcon';
 import { CrossIcon } from '@/components/common/icon/CrossIcon';
 import { SupergroupIcon } from '@/components/common/icon/SupergroupIcon';
 import { SearchOutlinedIcon } from '@/components/common/icon/SearchOutlinedIcon';
-import { LiteratureIcon } from '@/components/common/icon/LiteratureIcon';
-import { MathIcon } from '@/components/common/icon/MathIcon';
-import { PhysicsIcon } from '@/components/common/icon/PhysicsIcon';
-import { GeographyIcon } from '@/components/common/icon/GeographyIcon';
-
 
 const meta = {
   title: 'Common/Icon',
@@ -49,10 +44,6 @@ const IconGrid = () => (
     <HomeIcon size={24} />
     <CrossIcon size={24} />
     <SupergroupIcon size={24} />
-    <LiteratureIcon size={24} color1={"#D4DBE8"} color2={"#1B212E"} />
-    <MathIcon size={24} color1={"#D4DBE8"} color2={"#1B212E"} />
-    <PhysicsIcon size={24} color1={"#D4DBE8"} color2={"#1B212E"} />
-    <GeographyIcon size={24} color1={"#D4DBE8"} color2={"#1B212E"} />
   </div>
 )
 

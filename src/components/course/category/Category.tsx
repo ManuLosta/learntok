@@ -20,7 +20,7 @@ export const Category = ({
     {...props}
   >
     {icon}
-    <div className="typography-body-small text-foreground">{label}</div>
+    <div className="typography-body-small font-bold text-foreground">{label}</div>
   </div>
 );
 
