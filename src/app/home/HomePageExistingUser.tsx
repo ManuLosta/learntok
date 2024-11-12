@@ -23,7 +23,7 @@ export default function HomePage() {
             courseName="Art and Culture"
             labelName="Literature"
             labelColor="#B2C9FF"
-            path="https://picsum.photos/200/300"
+            path="/assets/art&culture.png"
             completedModules={41}
             totalModules={57}
             variant="on_progress"
@@ -33,7 +33,7 @@ export default function HomePage() {
             courseName="Algebra 1"
             labelName="Math"
             labelColor="#D4DBE8"
-            path="https://picsum.photos/200/301"
+            path='/assets/algebracourse.png'
             completedModules={41}
             totalModules={57}
             variant="on_progress"
@@ -43,7 +43,7 @@ export default function HomePage() {
             courseName="Geometry 1"
             labelName="Math"
             labelColor="#D4DBE8"
-            path="https://picsum.photos/200/310"
+            path="/assets/geometryclass.png"
             completedModules={41}
             totalModules={57}
             variant="on_progress"
@@ -55,7 +55,7 @@ export default function HomePage() {
       <section className="w-full">
         <h2 className="typography-header-4 mb-4">Categories</h2>
         <div className="overflow-hidden">
-          <div className="flex flex-row gap-4 overflow-x-auto pb-4 scrollbar-hide pl-2">
+          <div className="flex flex-row gap-6 overflow-x-auto pb-4 scrollbar-hide pr-4">
             <Category label="Literature" color="#B2C9FF" icon={<LiteratureIcon size={60} background="#B2C9FF" foreground="#01226F" />} />
             <Category label="Math" color="#D4DBE8" icon={<MathIcon size={60} background="#D4DBE8" foreground="#1B212E" />} />
             <Category label="Geography" color="#A7F3D0" icon={<GeographyIcon size={60} background="#A7F3D0" foreground="#1D572C" />} />
@@ -78,7 +78,7 @@ export default function HomePage() {
               courseName="World Literature Classics"
               labelName="Literature"
               labelColor="#B2C9FF"
-              path="https://picsum.photos/200/302"
+              path="/assets/worldliterature.png"
               completedModules={0}
               totalModules={1}
             />
@@ -87,7 +87,7 @@ export default function HomePage() {
               courseName="Mathematical Logic"
               labelName="Math"
               labelColor="#D4DBE8"
-              path="https://picsum.photos/200/303"
+              path="/assets/mathematicallogic.png"
               completedModules={0}
               totalModules={1}
             />
@@ -105,7 +105,34 @@ export default function HomePage() {
               courseName="Introduction to Geometry"
               labelName="Math"
               labelColor="#D4DBE8"
-              path="https://picsum.photos/200/304"
+              path="/assets/geometryclass.png"
+              completedModules={12}
+              totalModules={20}
+            />
+            <CourseItem
+              className="min-w-[221px]"
+              courseName="World Geography"
+              labelName="Geography"
+              labelColor="#A7F3D0"
+              path="/assets/worldgeo.png"
+              completedModules={12}
+              totalModules={20}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* New Releases Section */}
+      <section className="w-full">
+        <h2 className="typography-header-4 mb-4">New releases</h2>
+        <div className="overflow-hidden">
+          <div className="flex flex-row gap-4 overflow-x-auto pb-4 scrollbar-hide pr-4">
+            <CourseItem
+              className="min-w-[221px]"
+              courseName="Electricity and Magnetism"
+              labelName="Physics"
+              labelColor="#FED7AA"
+              path="/assets/e&m.png"
               completedModules={12}
               totalModules={20}
             />
