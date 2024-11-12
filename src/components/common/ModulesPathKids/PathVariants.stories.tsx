@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { PathVariants, PathVariantsProps } from './PathVariants';
-import { JSX } from 'react';
+import { PathVariants } from './PathVariants';
 
 const meta = {
   title: 'Common/PathVariants',
@@ -15,32 +14,20 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-const RenderComponent = (args: JSX.IntrinsicAttributes & PathVariantsProps) => (
-  <div className="bg-white min-w-[300px] max-w-lg">
-    <PathVariants {...args} />
-  </div>
-);
-
-export const BlueModule: Story = {
-  render: (args) => <RenderComponent {...args} />,
+export const BlueVariant: Story = {
   args: {
     variant: 'blue',
-    moduleName: 'ModuleName',
   },
 };
 
-export const GreenModule: Story = {
-  render: (args) => <RenderComponent {...args} />,
+export const GreenVariant: Story = {
   args: {
     variant: 'green',
-    moduleName: 'ModuleName',
   },
 };
 
-export const GreyModule: Story = {
-  render: (args) => <RenderComponent {...args} />,
+export const GreyVariant: Story = {
   args: {
     variant: 'grey',
-    moduleName: 'ModuleName',
   },
 };

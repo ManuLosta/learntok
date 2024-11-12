@@ -2,7 +2,6 @@ import React from 'react';
 
 interface PathVariantsProps {
   variant: 'blue' | 'green' | 'grey';
-  moduleName: string;
 }
 
 const variantToSvgMap = {
@@ -11,17 +10,13 @@ const variantToSvgMap = {
   grey: '/assets/GreyPath.svg',
 };
 
-export const PathVariants = ({ variant, moduleName }: PathVariantsProps) => {
+export const PathVariants = ({ variant }: PathVariantsProps) => {
   const svgPath = variantToSvgMap[variant];
 
   return (
-    <div className="flex w-full max-w-full flex-col gap-2 p-4 overflow-hidden">
-      <div className="flex w-full cursor-pointer items-center gap-4">
-        <img src={svgPath} alt={`${variant} path`} className="w-8 h-8" />
-        <div className="flex flex-grow flex-col w-[220px] h-[24px]">
-          <p className="typography-body-bold">{moduleName}</p>
-        </div>
-      </div>
+    <div className="flex items-center gap-3 p-[16px_7px_35px_8px] flex-1">
+      <img src={svgPath} alt={`${variant} path`} className="w-[40px] h-[60px] flex-shrink-0" />
+      <span className="font-bold text-gray-800 text-sm leading-[1.5]">Module Name</span>
     </div>
   );
 };
