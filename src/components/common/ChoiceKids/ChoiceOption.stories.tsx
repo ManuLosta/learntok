@@ -48,7 +48,7 @@ export const Neutral: Story = {
   },
 };
 
-export const GridExample: Story = {
+export const GridExample: Partial<Story> = {
   render: () => (
     <div className="grid grid-cols-2 gap-4">
       <ChoiceOption variant="incorrect">Option 1</ChoiceOption>
