@@ -17,12 +17,13 @@ const avatarVariants = cva(
 
 export interface AvatarProps extends VariantProps<typeof avatarVariants> {
     imageUrl: string;
+    size?: number;
 }
 
-export const Avatar = ({ variant , imageUrl }: AvatarProps) => {
+export const Avatar = ({ variant , imageUrl, size = 80 }: AvatarProps) => {
     return (
-        <div className={cn(avatarVariants({variant}), `min-h-[80px]`, `min-w-[80px]`)}>
-            <Image src={imageUrl} alt="Avatar" width={52} height={52}/>
+        <div className={cn(avatarVariants({variant}), `min-h-[${size}px]`, `min-w-[${size}px]`)}>
+            <Image src={imageUrl} alt="Avatar" width={size - 28} height={size - 28}/>
         </div>
     );
 };

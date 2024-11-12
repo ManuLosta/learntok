@@ -50,7 +50,7 @@ export const James: Story = {
   },
 }
 
-export const List: Story = {
+export const List: Partial<Story> = {
   render: () => (
     <div className="flex flex-col gap-4 w-[283px]">
       <UserList username="John Doe" avatarUrl="/assets/booky-blue.svg" avatarColor="blue" />

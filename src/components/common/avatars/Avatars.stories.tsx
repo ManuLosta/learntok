@@ -8,6 +8,7 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
+  tags: ["autodocs"]
 } satisfies Meta<typeof Avatar>;
 
 export default meta;
@@ -19,11 +20,11 @@ export const Blue: Story = {
 };
 
 export const Orange: Story = {
-  args: { imageUrl: '/assets/booky-orange.svg' , variant: "blue" },
+  args: { imageUrl: '/assets/booky-orange.svg' , variant: "orange" },
 };
 
 export const Green: Story = {
-  args: { imageUrl: '/assets/booky-green.svg' , variant: "blue" },
+  args: { imageUrl: '/assets/booky-green.svg' , variant: "green" },
 };
 
 export const BlueKid: Story = {
