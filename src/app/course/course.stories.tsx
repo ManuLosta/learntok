@@ -6,7 +6,7 @@ const meta = {
   title: "Pages/Course",
   parameters: {
     layout: 'fullscreen',
-    viewport: { defaultViewport: 'mobile2' },
+    viewport: { defaultViewport: 'iphone14' },
   },
   component: Course,
 } satisfies Meta<typeof Course>;

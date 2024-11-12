@@ -6,7 +6,7 @@ const meta = {
   component: HomePage,
   parameters: {
     layout: 'fullscreen',
-    viewport: { defaultViewport: 'mobile2' },
+    viewport: { defaultViewport: 'iphone14' },
   },
 } satisfies Meta<typeof HomePage>;
 

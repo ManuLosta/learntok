@@ -1,10 +1,10 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import Callout from '@/components/course/callout/Callout';
+import Callout from '@/components/common/callout/Callout';
 import { CalendarIcon } from '@/components/common/icon/CalendarIcon';
 
 const meta = {
-  title: 'Components/Callout',
+  title: 'Common/Callout',
   component: Callout,
   parameters: {
     layout: 'centered',

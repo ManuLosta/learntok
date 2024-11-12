@@ -9,7 +9,7 @@ const meta = {
   component: Drawer,
   tags: ["autodocs"],
   parameters: {
-    viewport: { defaultViewport: 'mobile2' },
+    viewport: { defaultViewport: 'iphone14' },
     layout: 'centered',
   },
 } satisfies Meta<typeof Drawer>;

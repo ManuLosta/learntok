@@ -1,6 +1,7 @@
 import React from 'react';
 import { ProgressBar, ProgressBarProps } from '@/components/common/progress-bar/ProgressBar';
 import type { Meta, StoryObj } from '@storybook/react';
+import { ProgressBarIcon } from '@/components/common/progress-bar/ProgressBarIcon';
 
 const meta = {
   title: 'Common/ProgressBar',
@@ -36,6 +37,20 @@ export const Completed: Story = {
   render: Template,
   args: {
     progress: 100,
+  }
+}
+
+export const WithIcons: Story = {
+  render: (args) => (
+    <div className="flex gap-2">
+      <ProgressBar {...args} />
+      <ProgressBarIcon></ProgressBarIcon>
+      <ProgressBarIcon></ProgressBarIcon>
+      <ProgressBarIcon></ProgressBarIcon>
+    </div>
+  ),
+  args: {
+    progress: 75
   }
 }
 
