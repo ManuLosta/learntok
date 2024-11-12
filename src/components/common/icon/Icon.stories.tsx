@@ -16,6 +16,7 @@ import { CrossIcon } from '@/components/common/icon/CrossIcon';
 import { SupergroupIcon } from '@/components/common/icon/SupergroupIcon';
 import { SearchOutlinedIcon } from '@/components/common/icon/SearchOutlinedIcon';
 import { MenuIcon } from '@/components/common/icon/MenuIcon';
+import { ChatIcon } from '@/components/common/icon/ChatIcon';
 
 const meta = {
   title: 'Common/Icon',
@@ -46,6 +47,7 @@ const IconGrid = () => (
     <CrossIcon size={24} />
     <SupergroupIcon size={24} />
     <MenuIcon size={24} />
+    <ChatIcon size={24} />
   </div>
 )
 
