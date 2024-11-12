@@ -41,7 +41,7 @@ export default function CourseHeaderInfo({
   return (
     <div className="relative">
       <motion.header
-        className="fixed left-0 right-0 top-0 z-10 flex flex-col rounded-b-2xl bg-gray-200 bg-cover bg-center transition-all duration-300"
+        className="fixed left-0 right-0 top-0 z-10 flex flex-col rounded-b-2xl bg-slate-50 bg-cover bg-center transition-all duration-300"
         style={{
           height: headerHeight,
           padding: headerPadding,
@@ -60,7 +60,7 @@ export default function CourseHeaderInfo({
             !isAbsolute && 'items-center justify-center',
           )}
         >
-          <IconButton>
+          <IconButton className={cn(!isAbsolute ? "bg-transparent" : "bg-gray-200")}>
             <ChevronLeft size={24} />
           </IconButton>
           <motion.h1
@@ -77,7 +77,7 @@ export default function CourseHeaderInfo({
           >
             {title}
           </motion.h1>
-          <IconButton>
+          <IconButton className={cn(!isAbsolute ? "bg-transparent" : "bg-gray-200")}>
             <SupergroupIcon size={24} />
           </IconButton>
         </div>

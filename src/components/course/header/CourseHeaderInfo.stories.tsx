@@ -2,11 +2,11 @@ import type { Meta, StoryObj } from '@storybook/react';
 import CourseHeaderInfo from '@/components/course/header/CourseHeaderInfo';
 
 const meta = {
-  title: 'Course/Header',
+  title: 'Course/HeaderInfo',
   component: CourseHeaderInfo,
   parameters: {
     layout: 'fullscreen',
-    viewport: { defaultViewport: 'mobile2' },
+    viewport: { defaultViewport: 'iphone14' },
   },
   tags: ['autodocs'],
 } satisfies Meta<typeof CourseHeaderInfo>;

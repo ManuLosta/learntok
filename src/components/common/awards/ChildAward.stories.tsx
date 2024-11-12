@@ -3,12 +3,20 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ChildAward } from './ChildAward';
 
 const meta = {
-  title: 'Common/Awards/ChildAward',
+  title: 'Common/ChildAward',
   component: ChildAward,
   parameters: {
     layout: 'centered',
   },
 
+  tags: ["autodocs"],
+
+  argTypes: {
+    variant: {
+      control: 'select',
+      options: ['gold', 'silver', 'bronze'],
+    },
+  },
 } satisfies Meta<typeof ChildAward>;
 
 export default meta;

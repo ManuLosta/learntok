@@ -13,6 +13,7 @@ const meta = {
       options: ['default', 'correct', 'incorrect', 'neutral'],
     },
   },
+  tags: ["autodocs"],
 } satisfies Meta<typeof ChoiceOption>;
 
 export default meta;
